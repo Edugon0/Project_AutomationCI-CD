@@ -98,3 +98,5 @@ resource "aws_ecr_repository" "ecr-site" {
 - A EC2 precisa de uma IAM Role com permissão de leitura no ECR para fazer pull sem credenciais
 - Usar `force_delete = true` no recurso ECR do Terraform para facilitar o destroy
 - Acessar a aplicação sempre via `http://` — sem SSL configurado, o `https://` é recusado pelo navegador
+
+[Go to Previous](cicd.md)  | [Go to Next](problemas-solucoes.md)

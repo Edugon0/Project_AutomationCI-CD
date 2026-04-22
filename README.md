@@ -40,11 +40,11 @@ Obs.: Esses dois repositórios estão por enquanto privado por questão de segur
  
 ## 📂 Documentação
  
-- [🏗️ Arquitetura detalhada](docs/arquitetura.md)
-- [🌱 Terraform — o que aprendi](docs/terraform.md)
-- [⚙️ Pipelines CI/CD](docs/cicd.md)
-- [🐳 Docker + ECR](docs/docker-ecr.md)
-- [🔥 Problemas e soluções](docs/problemas-solucoes.md)
+- [🏗️ Arquitetura detalhada](arquitetura.md)
+- [🌱 Terraform — o que aprendi](terraform.md)
+- [⚙️ Pipelines CI/CD](cicd.md)
+- [🐳 Docker + ECR](docker-ecr.md)
+- [🔥 Problemas e soluções](problemas-solucoes.md)
 ---
 ## 💡 Principais Aprendizados
  

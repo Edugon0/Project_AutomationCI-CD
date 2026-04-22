@@ -126,3 +126,6 @@ A permissão `id-token: write` é obrigatória para que o GitHub gere o token OI
 - Sempre adicionar `chmod 400` na chave privada antes de usar SSH
 - Usar `docker stop || true` antes do `docker run` para evitar conflito de nomes de container
 - Usar `workflow_dispatch` para operações destrutivas como `terraform destroy` (OPCIONAL, pois foi colocado pra testar a criação do container na ECR)
+---
+
+[Go to Previous](terraform.md)  | [Go to Next](docker-ecr.md)

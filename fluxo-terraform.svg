@@ -1,0 +1,84 @@
+<svg width="900" height="560" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+
+  <defs>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#7c5cfc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="#0a0e1a" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" fill="#e2e8f0" font-size="15" font-weight="600">Fluxo de Provisionamento — Terraform CI/CD</text>
+
+  <!-- ── DESENVOLVEDOR ── -->
+  <rect x="300" y="58" width="300" height="55" rx="10" fill="#111827" stroke="#1e2d45" stroke-width="1.5"/>
+  <text x="450" y="81" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">Desenvolvedor</text>
+  <text x="450" y="101" text-anchor="middle" fill="#64748b" font-size="11">git push / workflow_dispatch</text>
+
+  <!-- Arrow dev → GHA -->
+  <line x1="450" y1="113" x2="450" y2="158" stroke="#7c5cfc" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+
+  <!-- ── GITHUB ACTIONS ── -->
+  <rect x="290" y="158" width="320" height="72" rx="10" fill="#1a1a2e" stroke="#7c5cfc" stroke-width="1.5"/>
+  <text x="450" y="182" text-anchor="middle" fill="#7c5cfc" font-size="13" font-weight="600">GitHub Actions</text>
+  <text x="450" y="200" text-anchor="middle" fill="#94a3b8" font-size="11">terraform CI/CD</text>
+  <text x="450" y="220" text-anchor="middle" fill="#3d3d5a" font-size="10">SSH Key secret + chmod 400</text>
+
+  <!-- Arrow GHA → IAM -->
+  <line x1="450" y1="230" x2="450" y2="278" stroke="#7c5cfc" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr-purple)"/>
+  <rect x="330" y="240" width="240" height="18" fill="#0a0e1a"/>
+  <text x="450" y="253" text-anchor="middle" fill="#64748b" font-size="10">OIDC → AssumeRoleWithWebIdentity</text>
+
+  <!-- ── IAM ROLE ── -->
+  <rect x="290" y="278" width="320" height="55" rx="10" fill="#130f00" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="301" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="600">AWS IAM Role</text>
+  <text x="450" y="320" text-anchor="middle" fill="#94a3b8" font-size="11">GitHub-Infra-Role</text>
+
+  <!-- Trunk + horizontal bar -->
+  <line x1="450" y1="333" x2="450" y2="368" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="90" y1="368" x2="810" y2="368" stroke="#f59e0b" stroke-width="1.5"/>
+
+  <!-- Verticals to each card -->
+  <line x1="120" y1="368" x2="120" y2="398" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arr-amber)"/>
+  <line x1="330" y1="368" x2="330" y2="398" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arr-amber)"/>
+  <line x1="570" y1="368" x2="570" y2="398" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arr-amber)"/>
+  <line x1="780" y1="368" x2="780" y2="398" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arr-amber)"/>
+
+  <!-- ── EC2 ── -->
+  <rect x="40" y="398" width="160" height="80" rx="10" fill="#150d25" stroke="#7c5cfc" stroke-width="1.5"/>
+  <text x="120" y="426" text-anchor="middle" fill="#7c5cfc" font-size="13" font-weight="600">EC2</text>
+  <text x="120" y="446" text-anchor="middle" fill="#94a3b8" font-size="11">website-server</text>
+  <text x="120" y="464" text-anchor="middle" fill="#64748b" font-size="10">t3.micro</text>
+
+  <!-- ── ECR ── -->
+  <rect x="250" y="398" width="160" height="80" rx="10" fill="#051510" stroke="#00d4aa" stroke-width="1.5"/>
+  <text x="330" y="426" text-anchor="middle" fill="#00d4aa" font-size="13" font-weight="600">ECR</text>
+  <text x="330" y="446" text-anchor="middle" fill="#94a3b8" font-size="11">site_prod</text>
+  <text x="330" y="464" text-anchor="middle" fill="#64748b" font-size="10">Imagens Docker</text>
+
+  <!-- ── S3 ── -->
+  <rect x="490" y="398" width="160" height="80" rx="10" fill="#130f00" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="570" y="426" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="600">S3 Bucket</text>
+  <text x="570" y="446" text-anchor="middle" fill="#94a3b8" font-size="11">terraform state</text>
+  <text x="570" y="464" text-anchor="middle" fill="#64748b" font-size="10">Estado remoto</text>
+
+  <!-- ── SECURITY GROUP ── -->
+  <rect x="700" y="398" width="160" height="80" rx="10" fill="#0a1520" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="780" y="420" text-anchor="middle" fill="#3b82f6" font-size="13" font-weight="600">Security Group</text>
+  <text x="780" y="440" text-anchor="middle" fill="#94a3b8" font-size="11">website-sg</text>
+  <text x="780" y="458" text-anchor="middle" fill="#64748b" font-size="10">:22  :80  :443</text>
+
+  <!-- ── LEGEND ── -->
+  <line x1="200" y1="510" x2="230" y2="510" stroke="#7c5cfc" stroke-width="1.5"/>
+  <text x="238" y="514" fill="#64748b" font-size="11">Trigger / Pipeline</text>
+  <line x1="390" y1="510" x2="420" y2="510" stroke="#7c5cfc" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="428" y="514" fill="#64748b" font-size="11">OIDC Auth</text>
+  <line x1="560" y1="510" x2="590" y2="510" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="598" y="514" fill="#64748b" font-size="11">Provisionamento</text>
+
+</svg>

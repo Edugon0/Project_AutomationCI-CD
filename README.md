@@ -22,7 +22,7 @@ Obs.: Esses dois repositórios estão por enquanto privado por questão de segur
  
 ## 🏗️ Arquitetura
 
-![Arquitetura](docs/arquitetura.svg)
+![Arquitetura](arquitetura.svg)
 
 ---
 
